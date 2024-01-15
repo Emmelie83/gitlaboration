@@ -1,1 +1,83 @@
-ECHO is on.
+1.
+mkdir GitLab
+cd GitLab
+git init
+git checkout -b main
+
+2.
+echo duck > README.md
+echo moose >> README.md
+echo cat >> README.md
+
+3.
+git add README.md
+git commit -m "Initial commit"
+
+4.
+git checkout -b feature1
+
+5.
+echo dog >> README.md
+notepad README.md
+[Manually replacing moose with mouse]
+git add README.md
+git commit -m "Add dog, replace moose with mouse"
+
+6.
+git checkout main
+notepad README.md
+[Manually replacing moose with mahmut]
+git add README.md
+git commit -m "Replace moose with mahmut"
+
+7.
+git merge feature1
+notepad README.md
+[Manually fixing conflicts]
+git add README.md
+git commit -m "Merge feature1 into main"
+
+8.
+git tag extinct
+
+9.
+git reset --hard HEAD~
+
+10.
+git branch feature2
+
+11.
+notepad README.md
+[Manually capitalizing first letter in animal name]
+git add README.md
+git commit -m "Capitalize first letter in animal name"
+
+12.
+git checkout feature2
+echo > fix1.txt
+git add fix1.txt
+git commit -m "Add fix1.txt"
+echo > fix2.txt
+git add fix2.txt
+git commit -m "Add fix2.txt"
+
+13.
+git checkout main
+dir
+
+14.
+git reflog
+git cherry-pick 0f8d408
+
+15.
+notepad fix2.txt
+[Manually typing the commands to the file]
+
+16.
+git remote add origin https://github.com/Emmelie83/gitlaboration.git/
+git push -u origin main feature1 feature2
+notepad fix2.txt
+[Manually typing the commands to the file]
+git add fix2.txt
+git commit -m "Update fix2.txt with git commands"
+git push
