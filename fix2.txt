@@ -81,3 +81,30 @@ notepad fix2.txt
 git add fix2.txt
 git commit -m "Update fix2.txt with git commands"
 git push
+
+17.
+echo *.jar > .gitignore
+echo /out/ >> .gitignore
+echo /target/ >> .gitignore
+echo !/target/*.html >> .gitignore
+git add .gitignore
+git commit -m "Add gitignore file"
+git push
+
+18.
+git tag -a v1.0 -m "Version 1.0"
+
+19.
+git rebase -i HEAD~3
+git push -f
+
+20.
+git switch -c feature3
+notepad fix2.txt
+[Manually adding final commands]
+git add fix2.txt
+git commit -m "Update fix2.txt with final commands"
+git switch main
+git merge --no-ff feature3
+git push main feature1 feature2 feature3
+git push --tags
